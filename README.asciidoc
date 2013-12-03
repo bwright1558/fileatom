@@ -1,5 +1,9 @@
-fileatom
-========
+:man source:  fileatom
+:man version: {revnumber}
+:man manual:  fileatom manual
+
+fileatom(1)
+===========
 
 Name
 ----
@@ -122,3 +126,7 @@ Author
 ------
 
 Brian Wright <bwright1558@gmail.com>
+
+////
+vim: set ft=asciidoc:
+////
