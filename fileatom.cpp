@@ -15,8 +15,12 @@
  * along with this program.  If not, see [http://www.gnu.org/licenses/].
  */
 
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
 #include <GL/glu.h>
 #include <GL/glut.h>
+#endif
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
