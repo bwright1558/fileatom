@@ -1,0 +1,124 @@
+fileatom
+========
+
+Name
+----
+
+fileatom - 3D filesystem visualizer
+
+Synopsis
+--------
+
+*fileatom* ['PATH']
+
+Description
+-----------
+
+*fileatom* is a 3D filesystem visualizer that displays the files (cubes) and
+directories (spheres) contained in the current working directory.
+
+Options
+-------
+
+'PATH'::
+    Use the given directory. The current working directory is used if 'PATH'
+    is not given.
+
+Building
+--------
+
+Run *make* to compile *fileatom*.
+
+Controls
+--------
+
+*fileatom* is controlled using the mouse and keyboard.
+
+Mouse Controls
+~~~~~~~~~~~~~~
+
+*Left Button*::
+    Press and drag the mouse to rotate the file atom.
+
+Keyboard Controls
+~~~~~~~~~~~~~~~~~
+
+*q*::
+    Quit *fileatom*.
+
+*o*::
+    Toggle animation.
+
+*a*::
+    Show all files and directories.
+
+*d*::
+    Show only directories.
+
+*f*::
+    Show only files.
+
+*t*::
+    Toggle text.
+
+*c*::
+    Toggle cube in the center of the file atom.
+
+*s*::
+    Toggle sphere that the files and directories orbit around.
+
+*j*::
+    Select the next file or directory.
+
+*k*::
+    Select the previous file or directory.
+
+*g*::
+    Go to the selected directory. Do nothing if the selected object is a file.
+
+*r*::
+    Toggle between random and tangent rotation axes (orbits).
+
+*n*::
+    New rotation axes (orbits).
+
+*<*::
+    Decrease file atom's radius.
+
+*>*::
+    Increase file atom's radius.
+
+*[*::
+    Decrease animation speed.
+
+*]*::
+    Increase animation speed.
+
+*-*::
+    Decrease size of file and directory objects.
+
+*+*::
+    Increase size of file and directory objects.
+
+*UP*::
+    Move closer to the file atom.
+
+*DOWN*::
+    Move further away from the file atom.
+
+*LEFT*::
+    Move to the left of the file atom.
+
+*RIGHT*::
+    Move to the right of the file atom.
+
+*PAGE_UP*::
+    Move above the file atom.
+
+*PAGE_DOWN*::
+    Move below the file atom.
+
+Author
+------
+
+Brian Wright <bwright1558@gmail.com>
