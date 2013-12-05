@@ -112,7 +112,8 @@ float randf(float a, float b) {
 void updatefiles() {
     int i;
     struct dirent *dp;
-    char *path = get_current_dir_name();
+    //char *path = get_current_dir_name();
+    char *path = getcwd(NULL, 0);
     DIR *dir = opendir(path);
     DIR *testdir = NULL;
     i = nfiles = selfile = 0;
