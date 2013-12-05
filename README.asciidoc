@@ -13,7 +13,7 @@ fileatom - 3D filesystem visualizer
 Synopsis
 --------
 
-*fileatom* ['PATH']
+*fileatom* ['options']
 
 Description
 -----------
@@ -24,9 +24,30 @@ directories (spheres) contained in the current working directory.
 Options
 -------
 
-'PATH'::
+*-o*::
+    Orbit animation turned on.
+
+*-t*::
+    Filename text turned on.
+
+*-r 'RADIUS'*::
+    Set the orbit radius to 'RADIUS'.
+
+*-s 'SPEED'*::
+    Set the animation speed to 'SPEED'.
+
+*-p 'PATH'*::
     Use the given directory. The current working directory is used if 'PATH'
     is not given.
+
+*-x 'X'*::
+    Move camera 'X' units along x-axis.
+
+*-y 'Y'*::
+    Move camera 'Y' units along the y-axis.
+
+*-z 'Z'*::
+    Move camera 'Z' units along the z-axis.
 
 Building
 --------

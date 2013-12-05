@@ -42,7 +42,7 @@ typedef float vec16[16];
 static int winid;
 static float transx = 0.0f, transy = 0.0f, transz = -4.0f;
 static float radius = 1.0f, fileradius = 0.1f, speed = 0.002f;
-static bool orbit = true, randaxes = false, text = true, firstframe = true;
+static bool orbit = false, randaxes = false, text = false, firstframe = true;
 static bool sphere = false, cube = false;
 static int view = VIEW_ALL;
 static vec4 qclick = {1.0f, 0.0f, 0.0f, 0.0f};
@@ -82,8 +82,21 @@ void special(int key, int x, int y);
 void display();
 
 int main(int argc, char **argv) {
+    int opt;
     srand(time(NULL));
-    chdir(argv[1]);
+    while ((opt = getopt(argc, argv, "otr:s:p:x:y:z:")) != -1) {
+        switch (opt) {
+            case 'o': orbit = true; break;
+            case 't': text = true; break;
+            case 'r': radius = atof(optarg); break;
+            case 's': speed = atof(optarg); break;
+            case 'p': chdir(optarg); break;
+            case 'x': transx = -atof(optarg); break;
+            case 'y': transy = -atof(optarg); break;
+            case 'z': transz = -atof(optarg); break;
+            default: printf("usage: %s [-o] [-t] [-p PATH]", argv[0]); break;
+        }
+    }
     updatefiles();
     initglut(argc, argv);
     initgl();
