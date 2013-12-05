@@ -24,6 +24,9 @@ directories (spheres) contained in the current working directory.
 Options
 -------
 
+*-h*::
+    Print help message and exit.
+
 *-o*::
     Orbit animation turned on.
 
