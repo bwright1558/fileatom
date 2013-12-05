@@ -43,13 +43,13 @@ Options
     Use the given directory. The current working directory is used if 'PATH'
     is not given.
 
-*-x 'X'*::
+*-x 'TRANSX'*::
     Move camera 'X' units along x-axis.
 
-*-y 'Y'*::
+*-y 'TRANSY'*::
     Move camera 'Y' units along the y-axis.
 
-*-z 'Z'*::
+*-z 'TRANSZ'*::
     Move camera 'Z' units along the z-axis.
 
 Building
