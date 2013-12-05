@@ -84,7 +84,7 @@ void display();
 int main(int argc, char **argv) {
     int opt;
     srand(time(NULL));
-    while ((opt = getopt(argc, argv, "otr:s:p:x:y:z:")) != -1) {
+    while ((opt = getopt(argc, argv, "otr:s:p:x:y:z:h")) != -1) {
         switch (opt) {
             case 'o': orbit = true; break;
             case 't': text = true; break;
@@ -94,7 +94,8 @@ int main(int argc, char **argv) {
             case 'x': transx = -atof(optarg); break;
             case 'y': transy = -atof(optarg); break;
             case 'z': transz = -atof(optarg); break;
-            default: printf("usage: %s [-o] [-t] [-p PATH]", argv[0]); break;
+            case 'h': printf("usage: %s [-o] [-t] [-r RADIUS] [-s SPEED] [-x TRANSX] [-y TRANSY] [-z TRANSZ] [-p PATH] [-h]\n", argv[0]); exit(0); break;
+            default:  printf("usage: %s [-o] [-t] [-r RADIUS] [-s SPEED] [-x TRANSX] [-y TRANSY] [-z TRANSZ] [-p PATH] [-h]\n", argv[0]); exit(1); break;
         }
     }
     updatefiles();
